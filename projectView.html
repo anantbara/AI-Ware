@@ -18,11 +18,11 @@
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
-      background-color: #004445; /* Green */
+      background-color: #004445; /* Dark Green */
       color: #ffffff;
   }
   .bg-2 { 
-      background-color: #75b1a9; /* Dark Blue */
+      background-color: #75b1a9; /* Light Green */
       color: #ffffff;
   }
   .bg-3 { 
@@ -30,7 +30,7 @@
       color: #555555;
   }
   .bg-4 { 
-      background-color: #c0b283; /* Black Gray */
+      background-color: #c0b283; /* Gold */
       color: #fff;
   }
   .container-fluid {
@@ -97,81 +97,81 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">About Me</a></li>
-        <li><a href="projectView.html">Projects</a></li>
-        <li><a href="#contact" onclick="changeUrl();">Ping Me</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="index.html#contact" onclick="changeUrl();">Ping Me</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- First Container -->
-<div class="container-fluid bg-1 text-center" >
-  <h3 class="margin">Who Am I?</h3>
-  <img src="images/profile_pic.jpg" class="img-responsive img-circle margin" style="display:inline" alt="profile_pic" width="350" height="350">
-  <h3>I'm a Young Machine Learning Blood</h3>
-</div>
-
-<!-- Second Container -->
-<div class="container-fluid bg-2 text-center">
-  <h3 class="margin">What Am I?</h3>
-  <p>I'm a person who loves to dive deep into machine learning to learn and share knowledge about it and find the AI-powered solution for any problem. </p>
-  <a href="#" class="btn btn-default btn-lg">
-    <span class="glyphicon glyphicon-search"></span> Explore my Projects
-  </a>
-</div>
-
-<!-- Third Container (Grid) -->
-<div class="container-fluid bg-3 text-center" id = "contact">    
-  <h3 class="margin">Where To Find Me?</h3><br>
-  <div class="row">
-    <div class="col-sm-4">
-      <p>EmailId : anantbara@yahoo.com</p>
-	  <div id="email_pic" style="position:absolute; width:100%; height:100%">
-		<img src="images/Envelope.png" class="img-responsive margin" style="width:50%" alt="Email">
-	  </div>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Office : 694, 11th A Main Rd,<br>
-	  5th Block, Vishya Bank Colony,<br>
-	  DK Naik Nagar, Jayanagar,<br>
-	  Bengaluru, Karnataka 560041</p>
-      <div id="map1" style="width:350px;height:200px;background:yellow"></div>
-		<script>
-		function myMap() {
-		var mapOptions = {
-			center: new google.maps.LatLng(12.917382, 77.586314),
-			zoom: 10,
-			mapTypeId: google.maps.MapTypeId.HYBRID
-		}
-		var map = new google.maps.Map(document.getElementById("map1"), mapOptions);
-		}
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_G0Ou1EIIR2Fwyr4C-_APmJXXzHbwra8&callback=myMap"></script>
-    </div>
-    <div class="col-sm-4"> 
-      <p>Home : 316, 4th main,<br> 
-	  B block,	AECS Layout,<br> 
-	  Bengaluru, Karnataka 560037 <br><br></p>
-	  
-      <div id="map2" style="width:350px;height:200px;background:yellow"></div>
-		<script>
-		function myMap() {
-		var mapOptions = {
-			center: new google.maps.LatLng(12.966330, 77.714121),
-			zoom: 10,
-			mapTypeId: google.maps.MapTypeId.HYBRID
-		}
-		var map = new google.maps.Map(document.getElementById("map2"), mapOptions);
-		}
-		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvXrDjbnvYTaAk_O8Qimm8Bxu40Do4hmo&callback=myMap"></script>
-    </div>
+<div class="jumbotron bg-1">
+  <div class="container text-center">
+    <h1>Project Album</h1>
   </div>
 </div>
+  
+<div class="container-fluid bg-2 text-center">    
+  <h3>Machine Learning based Projects</h3><br>
+  <div class="row">
+    <div class="col-sm-3">
+      <p>ChatBot v.1.0</p>
+	  <a href="ProjectPages/project-1.html">
+		<img src="images/chatbot_1.png" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+    <div class="col-sm-3"> 
+      <p>ChatBot v2.0</p>
+	  <a href="ProjectPages/project-1.html">
+		<img src="images/chatbot_2.jpg" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Sentiment Analysis</p>
+	  <a href="project-1.html">
+		<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+    <div class="col-sm-3">
+      <p>Name-Entity Recognition</p>
+	  <a href="project-1.html">
+		<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+  </div>
+</div><br>
+
+<div class="container-fluid bg-2 text-center">    
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Image Classification</p>
+      <a href="project-1.html">
+		<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Spell Checker</p>
+      <a href="project-1.html">
+		<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+    <div class="col-sm-3"> 
+      <p>Text-to-Speech</p>
+      <a href="project-1.html">
+		<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+    <div class="col-sm-3">
+      <p>Some text..</p>
+      <a href="project-1.html">
+		<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
+	  </a>
+    </div>
+  </div>
+</div><br><br>
 
 <!-- Footer -->
 <footer class="container-fluid bg-4 text-center">
-	<p>Author: <a href="https://www.linkedin.com/in/anant-bara">Anant Bara</a></p>
+	<p>Author: <a href="https://www.linkedin.com/in/anant-bara">Anant</a></p>
 </footer>
 
 </body>
