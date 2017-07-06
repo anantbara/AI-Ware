@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Bootstrap Theme Simply Me</title>
+  <title>Portfolio</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -18,11 +18,11 @@
   p {font-size: 16px;}
   .margin {margin-bottom: 45px;}
   .bg-1 { 
-      background-color: #1abc9c; /* Green */
+      background-color: #004445; /* Green */
       color: #ffffff;
   }
   .bg-2 { 
-      background-color: #474e5d; /* Dark Blue */
+      background-color: #75b1a9; /* Dark Blue */
       color: #ffffff;
   }
   .bg-3 { 
@@ -49,6 +49,23 @@
   .navbar-nav  li a:hover {
       color: #1abc9c !important;
   }
+  .navbar-default {
+    background-color: #f1f1f2;
+    border-color: #E7E7E7;
+  }
+  #map1 {
+  display: table;
+  margin: 0 auto;
+  }
+#map2 {
+  display: table;
+  margin: 0 auto;
+}
+#email_pic img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
   </style>
 </head>
 <body>
@@ -62,7 +79,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Me</a>
+      <a class="navbar-brand" href="#">AI-Ware</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
@@ -96,20 +113,45 @@
   <div class="row">
     <div class="col-sm-4">
       <p>EmailId : anantbara@yahoo.com</p>
-      <img src="birds1.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+	  <div id="email_pic" style="position:absolute; width:100%; height:100%">
+		<img src="Envelope.png" class="img-responsive margin" style="width:50%" alt="Email">
+	  </div>
     </div>
     <div class="col-sm-4"> 
-      <p>Office : 694, 11th A Main Rd, 
-	  5th Block, Vishya Bank Colony, 
-	  DK Naik Nagar, Jayanagar, 
+      <p>Office : 694, 11th A Main Rd,<br>
+	  5th Block, Vishya Bank Colony,<br>
+	  DK Naik Nagar, Jayanagar,<br>
 	  Bengaluru, Karnataka 560041</p>
-      <img src="birds2.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <div id="map1" style="width:350px;height:200px;background:yellow"></div>
+		<script>
+		function myMap() {
+		var mapOptions = {
+			center: new google.maps.LatLng(12.917382, 77.586314),
+			zoom: 10,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		}
+		var map = new google.maps.Map(document.getElementById("map1"), mapOptions);
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_G0Ou1EIIR2Fwyr4C-_APmJXXzHbwra8&callback=myMap"></script>
     </div>
     <div class="col-sm-4"> 
-      <p>Home : 316, 4th main, 
-	  B block,	AECS Layout, 
-	  Bengaluru, Karnataka 560037 </p>
-      <img src="birds3.jpg" class="img-responsive margin" style="width:100%" alt="Image">
+      <p>Home : 316, 4th main,<br> 
+	  B block,	AECS Layout,<br> 
+	  Bengaluru, Karnataka 560037 <br><br></p>
+	  
+      <div id="map2" style="width:350px;height:200px;background:yellow"></div>
+		<script>
+		function myMap() {
+		var mapOptions = {
+			center: new google.maps.LatLng(12.966330, 77.714121),
+			zoom: 10,
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		}
+		var map = new google.maps.Map(document.getElementById("map2"), mapOptions);
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvXrDjbnvYTaAk_O8Qimm8Bxu40Do4hmo&callback=myMap"></script>
     </div>
   </div>
 </div>
