@@ -18,7 +18,7 @@
 	
 	  $.ajax({
 	    url: githubApiUrl,
-	    dataType: 'json',
+	    dataType: 'jsonp',
 	    success: function(response)
 	    {
 	      var encodedContent = response.data.content;
