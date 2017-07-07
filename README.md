@@ -1,12 +1,13 @@
 # Build your ChatBot
 ===
 ## Introduction:                                                                
-#### Chatbot is a service where it pretends to be like a person and chat with us via a chat interface. It can be a text conversation or spoken conversation. Chatbot can run on local machines and mobile phones and it can be accessed through the internet. Now a days, most of the companies have started developing their own Chatbot in order to engage with their customers. It can be interesting, inspiring and intriguing. It’s very popular now a days mainly for two reasons -
+Chatbot is a service where it pretends to be like a person and chat with us via a chat interface. It can be a text conversation or spoken conversation. Chatbot can run on local machines and mobile phones and it can be accessed through the internet. Now a days, most of the companies have started developing their own Chatbot in order to engage with their customers. It can be interesting, inspiring and intriguing. It’s very popular now a days mainly for two reasons -
 * Company need not depend on humans to handle their customers.
 * Various solutions exists to make the Chatbot intelligent with less time. 
-#### Now you may know the importance of Chatbot. But before talking about how to build the Chatbot, you have to know about its types and their initial requirements. Just go through these Chatbot types and try to map with your requirement and at last take a wise decision. The core model of Chatbot are classified into two groups:
+Now you may know the importance of Chatbot. But before talking about how to build the Chatbot, you have to know about its types and their initial requirements. Just go through these Chatbot types and try to map with your requirement and at last take a wise decision. The core model of Chatbot are classified into two groups:
 * Retrieval-based models
 * Generative models
+
 **_Retrieval-based models_**
 #### Retrieval-based models provide a simple but effective solution that can be developed in no time. It uses the predefined responses and some kind of heuristics in order to get an appropriate response based on the given input and context. The heuristic can be the vanilla approach i.e. rule based expression match or as complex as AI approach. These systems are not configured to generate any new text, they just pick a response from the set of responses that matches the intent of a statement. 
 **_Generative models_**
