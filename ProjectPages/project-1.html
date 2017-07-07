@@ -9,25 +9,25 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="javascripts/base64.js"></script>
   <script src="javascripts/marked.js"></script>
   <script type="text/javascript">
 	  var githubApiUrl = 'https://api.github.com/repos/anantbara/AI-Ware/readme';
 	  var contentContainerId = "readmeContent";
-	  var callbackFunctionName = "handleApiResponse";
-
-      function handleApiResponse(response)
-      {
-        var encodedContent = response.data.content;
-        var markdownText = Base64.decode(encodedContent);
-        var renderedHtml = marked(markdownText);
-
-        document.getElementById(contentContainerId).innerHTML = renderedHtml;
-      }
-
-      var newScript = document.createElement('script');
-      newScript.src = githubApiUrl + "?callback=" + callbackFunctionName;
-      document.getElementsByTagName('head')[0].appendChild(newScript);
+	
+	  $.ajax({
+	    url: githubApiUrl,
+	    dataType: 'jsonp',
+	    success: function(response)
+	    {
+	      var encodedContent = response.data.content;
+	      var markdownText = Base64.decode(encodedContent);
+	      var renderedHtml = marked(markdownText);
+	
+	      $(contentContainerId).html(renderedHtml);
+	    }
+	  });
   </script>
   <style>
   body {
