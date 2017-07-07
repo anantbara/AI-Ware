@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="javascripts/base64.js"></script>
+  <script src="javascripts/marked.js"></script>
+  <script type="text/javascript">
+	  var githubApiUrl = 'https://api.github.com/repos/anantbara/AI-Ware/readme';
+	  var contentContainerId = "readmeContent";
+	
+	  $.ajax({
+	    url: githubApiUrl,
+	    dataType: 'jsonp',
+	    success: function(response)
+	    {
+	      var encodedContent = response.data.content;
+	      var markdownText = Base64.decode(encodedContent);
+	      var renderedHtml = marked(markdownText);
+	
+	      $(contentContainerId).html(renderedHtml);
+	    }
+	  });
+  </script>
+  <style>
+  body {
+      font: 20px Montserrat, sans-serif;
+      line-height: 1.8;
+      color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+      background-color: #004445; /* Dark Green */
+      color: #ffffff;
+  }
+  .bg-2 { 
+      background-color: #75b1a9; /* Light Green */
+      color: #ffffff;
+  }
+  .bg-3 { 
+      background-color: #ffffff; /* White */
+      color: #555555;
+  }
+  .bg-4 { 
+      background-color: #c0b283; /* Gold */
+      color: #fff;
+  }
+  .container-fluid {
+      padding-top: 70px;
+      padding-bottom: 70px;
+  }
+  .navbar {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border: 0;
+      border-radius: 0;
+      margin-bottom: 0;
+      font-size: 12px;
+      letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+      color: #1abc9c !important;
+  }
+  .navbar-default {
+    background-color: #f1f1f2;
+    border-color: #E7E7E7;
+  }
+  #map1 {
+  display: table;
+  margin: 0 auto;
+  }
+#map2 {
+  display: table;
+  margin: 0 auto;
+}
+#email_pic img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+  </style>
+  <script type="text/javascript">
+	function changeUrl()
+	{
+			// change the url to regular here but I should ensure that internal reference has taken place
+			var sTemp = window.location.href;
+			setTimeout(function(){ 
+				sTemp = window.location.href;
+				var iIndex = sTemp.indexOf("#");
+				sTemp = sTemp.substring(0,iIndex);
+				window.history.pushState("", "", sTemp);
+			}, 0.1);
+	}
+  </script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">AI-Ware</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="index.html#contact" onclick="changeUrl();">Ping Me</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron bg-2">
+  <div class="container text-center">
+    <h1>ChatBOt v.1.0</h1>
+  </div>
+</div>
+  
+<div class="container-fluid bg-3 text-center" id="readmeContent">
+
+</div><br>
+
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+	<p>Author: <a href="https://www.linkedin.com/in/anant-bara">Anant</a></p>
+</footer>
+
+</body>
+</html>
