@@ -25,7 +25,3 @@ This is the domain which is being implemented and tested by many professionals a
 I hope, now you are very familiar with the basics of Chatbot and mapped your requirement/plans with the information provided here. It’s potentially a huge business opportunity for anyone willing to jump headfirst and build something people want.
 Now to build any AI system, the very first thing that comes to every individuals mind is that “How and where to start”. I will answer this question in the next session of “Build your ChatBot”.
 In the next session, we will dive into the development of Chatbot and will talk about “Data gathering and Preprocessing” and build end to end solution.
-
----
-layout: default  
----
