@@ -14,19 +14,20 @@
   <script type="text/javascript">
 	  var githubApiUrl = 'https://api.github.com/repos/anantbara/AI-Ware/readme';
 	  var contentContainerId = "readmeContent";
-	
-	  $.ajax({
-	    url: githubApiUrl,
-	    dataType: 'jsonp',
-	    success: function(response)
-	    {
-	      var encodedContent = response.data.content;
-	      var markdownText = Base64.decode(encodedContent);
-	      var renderedHtml = marked(markdownText);
-	
-	      $(contentContainerId).html(renderedHtml);
-	    }
-	  });
+	  var callbackFunctionName = "handleApiResponse";
+
+      function handleApiResponse(response)
+      {
+        var encodedContent = response.data.content;
+        var markdownText = Base64.decode(encodedContent);
+        var renderedHtml = marked(markdownText);
+
+        document.getElementById(contentContainerId).innerHTML = renderedHtml;
+      }
+
+      var newScript = document.createElement('script');
+      newScript.src = githubApiUrl + "?callback=" + callbackFunctionName;
+      document.getElementsByTagName('head')[0].appendChild(newScript);
   </script>
   <style>
   body {
