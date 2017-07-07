@@ -26,4 +26,6 @@ I hope, now you are very familiar with the basics of Chatbot and mapped your req
 Now to build any AI system, the very first thing that comes to every individuals mind is that “How and where to start”. I will answer this question in the next session of “Build your ChatBot”.
 In the next session, we will dive into the development of Chatbot and will talk about “Data gathering and Preprocessing” and build end to end solution.
 
-
+---
+layout: default  
+---
