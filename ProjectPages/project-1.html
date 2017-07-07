@@ -9,6 +9,25 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="javascripts/base64.js"></script>
+  <script src="javascripts/marked.js"></script>
+  <script type="text/javascript">
+	  var githubApiUrl = 'https://api.github.com/repos/anantbara/AI-Ware/readme';
+	  var contentContainerId = "#readmeContent";
+	
+	  $.ajax({
+	    url: githubApiUrl,
+	    dataType: 'jsonp',
+	    success: function(response)
+	    {
+	      var encodedContent = response.data.content;
+	      var markdownText = Base64.decode(encodedContent);
+	      var renderedHtml = marked(markdownText);
+	
+	      $(contentContainerId).html(renderedHtml);
+	    }
+	  });
+  </script>
   <style>
   body {
       font: 20px Montserrat, sans-serif;
@@ -110,8 +129,8 @@
   </div>
 </div>
   
-<div class="container-fluid bg-3 text-center">
-	{{ content }}
+<div class="container-fluid bg-3 text-center" id="readmeContent">
+
 </div><br>
 
 
