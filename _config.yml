@@ -1,0 +1,18 @@
+# global settings
+title: "Portfolio"
+description: "Portfolio of my work"
+url: https://anantbara.github.com
+relative_permalinks: false
+
+# build settings
+markdown: kramdown
+sass:
+  style: :compressed
+  
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "default"
