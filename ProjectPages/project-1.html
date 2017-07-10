@@ -1,8 +1,13 @@
+---
+layout: post
+title: Portfolio
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>Portfolio</title>
+  <title>{{ page.title }}</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,7 +18,7 @@
   <script src="javascripts/base64.js"></script>
   <script src="javascripts/marked.js"></script>
   <script type="text/javascript">
-	  var githubApiUrl = 'https://api.github.com/repos/anantbara/AI-Ware/readme';
+	  var githubApiUrl = 'https://api.github.com/repos/anantbara/anantbara.github.io/readme';
 	  var contentContainerId = "readmeContent";
 	
 	  $.ajax({
@@ -28,6 +33,9 @@
 	      $(contentContainerId).html(renderedHtml);
 	    }
 	  });
+  </script>
+  <script type="text/javascript">
+	$.ajax({url: "https://anantbara.github.io/README.html", success: function(data){$("readmeContent").html(data);}});
   </script>
   <style>
   body {
@@ -133,7 +141,6 @@
 <div class="container-fluid bg-3 text-center" id="readmeContent">
 
 </div><br>
-
 
 
 <!-- Footer -->
