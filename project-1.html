@@ -35,7 +35,7 @@ title: Portfolio
 	  });
   </script>
   <script type="text/javascript">
-	  alert("Alert generated")
+	$.ajax({url: "README.html", success: function(data){$("readmeContent").html(data);}});
   </script>
   <style>
   body {
@@ -139,7 +139,7 @@ title: Portfolio
 </div>
   
 <div class="container-fluid bg-3 text-center" id="readmeContent">
-$('#result').load('README.html');
+
 </div><br>
 
 
